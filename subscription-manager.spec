@@ -1,5 +1,5 @@
 Name: subscription-manager
-Version: 0.99.7
+Version: 0.99.7.1
 Release: 1%{?dist}
 Summary: Tools and libraries for subscription and repository management
 Group:   System Environment/Base
@@ -271,6 +271,12 @@ if [ $1 -eq 0 ] ; then
 fi
 
 %changelog
+* Mon Feb 20 2012 Devan Goodwin <dgoodwin@rm-rf.ca> 0.99.7.1-1
+- Fix Makefile for both Fedora 15+ and RHEL 7+. (dgoodwin@redhat.com)
+- String cleanups (alikins@redhat.com)
+- 790217: install-num-migrate-to-rhsm shouldn't copy both Desktop and
+  Workstation product certs. (awood@redhat.com)
+
 * Mon Feb 13 2012 Michael Stead <mstead@redhat.com> 0.99.7-1
 - Improve relevancy of details on my installed products tab.
   (dgoodwin@redhat.com)
