@@ -2,7 +2,7 @@
 %define use_rhsm_icon (0%{?fedora} && 0%{?fedora} < 15) || (0%{?rhel} && 0%{?rhel} < 7)
 
 Name: subscription-manager
-Version: 0.99.7.1
+Version: 0.99.7.2
 Release: 1%{?dist}
 Summary: Tools and libraries for subscription and repository management
 Group:   System Environment/Base
@@ -275,6 +275,9 @@ if [ $1 -eq 0 ] ; then
 fi
 
 %changelog
+* Mon Feb 20 2012 Devan Goodwin <dgoodwin@rm-rf.ca> 0.99.7.2-1
+- Fix spec for both Fedora 15+ and RHEL 7+. (dgoodwin@redhat.com)
+
 * Mon Feb 20 2012 Devan Goodwin <dgoodwin@rm-rf.ca> 0.99.7.1-1
 - Fix Makefile for both Fedora 15+ and RHEL 7+. (dgoodwin@redhat.com)
 - String cleanups (alikins@redhat.com)
